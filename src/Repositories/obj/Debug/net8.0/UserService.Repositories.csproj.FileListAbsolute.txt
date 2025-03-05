@@ -1,0 +1,11 @@
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/bin/Debug/net8.0/UserService.Repositories.deps.json
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/bin/Debug/net8.0/UserService.Repositories.dll
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/bin/Debug/net8.0/UserService.Repositories.pdb
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/UserService.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/UserService.Repositories.AssemblyInfoInputs.cache
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/UserService.Repositories.AssemblyInfo.cs
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/UserService.Repositories.csproj.CoreCompileInputs.cache
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/UserService.Repositories.dll
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/refint/UserService.Repositories.dll
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/UserService.Repositories.pdb
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Repositories/obj/Debug/net8.0/ref/UserService.Repositories.dll

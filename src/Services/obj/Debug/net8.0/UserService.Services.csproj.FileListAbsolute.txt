@@ -1,0 +1,11 @@
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/bin/Debug/net8.0/UserService.Services.deps.json
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/bin/Debug/net8.0/UserService.Services.dll
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/bin/Debug/net8.0/UserService.Services.pdb
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/UserService.Services.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/UserService.Services.AssemblyInfoInputs.cache
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/UserService.Services.AssemblyInfo.cs
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/UserService.Services.csproj.CoreCompileInputs.cache
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/UserService.Services.dll
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/refint/UserService.Services.dll
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/UserService.Services.pdb
+/Users/bogdanmihaila/Desktop/MibostarArt Project/UserService/src/Services/obj/Debug/net8.0/ref/UserService.Services.dll
