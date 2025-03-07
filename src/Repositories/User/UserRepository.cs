@@ -19,7 +19,7 @@ namespace Repositories.User
 
         public async Task<UserModel> GetByIdAsync(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
             var userModel = _mapper.Map<UserModel>(user);
             return userModel;
         }

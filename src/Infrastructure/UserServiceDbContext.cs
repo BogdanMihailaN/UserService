@@ -35,6 +35,8 @@ namespace Infrastructure
                 new User
                 {
                     Id = 1,
+                    FirstName = "John",
+                    LastName = "Doe",
                     Username = "admin",
                     Email = "admin@example.com",
                     PasswordHash = "hashed_password_example",
@@ -46,6 +48,8 @@ namespace Infrastructure
                 new User
                 {
                     Id = 2,
+                    FirstName = "Jane",
+                    LastName = "Doe",
                     Username = "user1",
                     Email = "user1@example.com",
                     PasswordHash = "hashed_password_example",

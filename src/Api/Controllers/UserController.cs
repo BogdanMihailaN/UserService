@@ -38,7 +38,7 @@ namespace UserService.Api
         public async Task<IActionResult> CreateUserAsync([FromBody] UserModel userDto)
         {
             var userId = await _userService.CreateUserAsync(userDto);
-            return CreatedAtAction(nameof(GetUserAsync), new { id = userId }, null);
+            return Ok();
         }
 
         [HttpPut("{id}")]
