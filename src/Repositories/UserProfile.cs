@@ -9,6 +9,8 @@ namespace Repositories
     {
         CreateMap<Domain.Entities.User, UserModel>();
         CreateMap<UserModel, Domain.Entities.User>();
+        CreateMap<RoleModel, Domain.Entities.Role>();
+        CreateMap<Domain.Entities.Role, RoleModel>();
     }
 }
 }

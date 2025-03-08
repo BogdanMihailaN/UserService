@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Repositories.Role;
 using Repositories.User;
 
 namespace Repositories
@@ -7,7 +8,8 @@ namespace Repositories
     {
         public static IServiceCollection AddRepositoryServices(this IServiceCollection services)
         {
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IRoleRepository, RoleRepository>();
 
             return services;
         }

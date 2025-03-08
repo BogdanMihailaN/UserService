@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Services.Role;
 using Services.User;
 
 namespace Services
@@ -7,7 +8,8 @@ namespace Services
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-            services.AddScoped<IUserService, User.UserService>();
+            services.AddTransient<IUserService, User.UserService>();
+            services.AddTransient<IRoleService, RoleService>();
 
             return services;
         }

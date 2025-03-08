@@ -46,5 +46,4 @@ namespace Services.User
             await _userRepository.DeleteUserAsync(id);
         }
     }
-
 }
