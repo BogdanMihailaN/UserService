@@ -8,59 +8,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UserService.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class SeedUserServiceData : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "Password",
-                table: "Users",
-                newName: "Username");
-
-            migrationBuilder.RenameColumn(
-                name: "LastName",
-                table: "Users",
-                newName: "PhoneNumber");
-
-            migrationBuilder.RenameColumn(
-                name: "FirstName",
-                table: "Users",
-                newName: "PasswordHash");
-
-            migrationBuilder.AddColumn<DateTime>(
-                name: "CreatedAt",
-                table: "Users",
-                type: "datetime2",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
-            migrationBuilder.AddColumn<DateTime>(
-                name: "DateOfBirth",
-                table: "Users",
-                type: "datetime2",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "FullName",
-                table: "Users",
-                type: "nvarchar(max)",
-                nullable: true);
-
-            migrationBuilder.AddColumn<bool>(
-                name: "IsActive",
-                table: "Users",
-                type: "bit",
-                nullable: false,
-                defaultValue: false);
-
-            migrationBuilder.AddColumn<DateTime>(
-                name: "UpdatedAt",
-                table: "Users",
-                type: "datetime2",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
             migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
@@ -73,6 +25,29 @@ namespace UserService.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Roles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -135,11 +110,11 @@ namespace UserService.Infrastructure.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "CreatedAt", "DateOfBirth", "Email", "FullName", "IsActive", "PasswordHash", "PhoneNumber", "UpdatedAt", "Username" },
+                columns: new[] { "Id", "CreatedAt", "DateOfBirth", "Email", "FirstName", "FullName", "IsActive", "LastName", "PasswordHash", "PhoneNumber", "UpdatedAt", "Username" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2025, 3, 7, 12, 52, 30, 423, DateTimeKind.Utc).AddTicks(4120), null, "admin@example.com", "Admin User", true, "hashed_password_example", null, new DateTime(2025, 3, 7, 12, 52, 30, 423, DateTimeKind.Utc).AddTicks(4470), "admin" },
-                    { 2, new DateTime(2025, 3, 7, 12, 52, 30, 423, DateTimeKind.Utc).AddTicks(5120), null, "user1@example.com", "User One", true, "hashed_password_example", null, new DateTime(2025, 3, 7, 12, 52, 30, 423, DateTimeKind.Utc).AddTicks(5120), "user1" }
+                    { 1, new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "admin@example.com", "John", "Admin User", true, "Doe", "hashed_password_example", null, new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin" },
+                    { 2, new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "user1@example.com", "Jane", "User One", true, "Doe", "hashed_password_example", null, new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "user1" }
                 });
 
             migrationBuilder.InsertData(
@@ -183,50 +158,8 @@ namespace UserService.Infrastructure.Migrations
             migrationBuilder.DropTable(
                 name: "Roles");
 
-            migrationBuilder.DeleteData(
-                table: "Users",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Users",
-                keyColumn: "Id",
-                keyValue: 2);
-
-            migrationBuilder.DropColumn(
-                name: "CreatedAt",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
-                name: "DateOfBirth",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
-                name: "FullName",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
-                name: "IsActive",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
-                name: "UpdatedAt",
-                table: "Users");
-
-            migrationBuilder.RenameColumn(
-                name: "Username",
-                table: "Users",
-                newName: "Password");
-
-            migrationBuilder.RenameColumn(
-                name: "PhoneNumber",
-                table: "Users",
-                newName: "LastName");
-
-            migrationBuilder.RenameColumn(
-                name: "PasswordHash",
-                table: "Users",
-                newName: "FirstName");
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Infrastructure
         {
             var optionsBuilder = new DbContextOptionsBuilder<UserServiceDbContext>();
             
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=UserServiceDb;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=UserServiceDb;TrustServerCertificate=True;Integrated Security=True;");
 
             return new UserServiceDbContext(optionsBuilder.Options);
         }

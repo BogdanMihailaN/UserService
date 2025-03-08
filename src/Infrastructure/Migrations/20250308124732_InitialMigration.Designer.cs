@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace UserService.Infrastructure.Migrations
 {
     [DbContext(typeof(UserServiceDbContext))]
-    [Migration("20250307125514_AddUserRoleNavigationAndSeedData")]
-    partial class AddUserRoleNavigationAndSeedData
+    [Migration("20250308124732_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,11 +75,17 @@ namespace UserService.Infrastructure.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -103,8 +109,10 @@ namespace UserService.Infrastructure.Migrations
                             Id = 1,
                             CreatedAt = new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@example.com",
+                            FirstName = "John",
                             FullName = "Admin User",
                             IsActive = true,
+                            LastName = "Doe",
                             PasswordHash = "hashed_password_example",
                             UpdatedAt = new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Username = "admin"
@@ -114,8 +122,10 @@ namespace UserService.Infrastructure.Migrations
                             Id = 2,
                             CreatedAt = new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user1@example.com",
+                            FirstName = "Jane",
                             FullName = "User One",
                             IsActive = true,
+                            LastName = "Doe",
                             PasswordHash = "hashed_password_example",
                             UpdatedAt = new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Username = "user1"
