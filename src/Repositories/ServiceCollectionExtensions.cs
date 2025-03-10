@@ -1,5 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using Repositories.Role;
+using Repositories.UserRole;
 using Repositories.User;
 
 namespace Repositories
@@ -9,7 +9,7 @@ namespace Repositories
         public static IServiceCollection AddRepositoryServices(this IServiceCollection services)
         {
             services.AddTransient<IUserRepository, UserRepository>();
-            services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IUserRoleRepository, UserRoleRepository>();
 
             return services;
         }

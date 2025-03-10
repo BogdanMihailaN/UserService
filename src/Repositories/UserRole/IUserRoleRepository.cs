@@ -1,8 +1,8 @@
 using Domain.Models;
 
-namespace Repositories.Role
+namespace Repositories.UserRole
 {
-    public interface IRoleRepository
+    public interface IUserRoleRepository
     {
         Task<RoleModel> GetRoleByIdAsync(int id);
         Task<IEnumerable<RoleModel>> GetAllRolesAsync();

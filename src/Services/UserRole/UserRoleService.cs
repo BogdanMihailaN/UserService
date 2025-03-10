@@ -1,13 +1,13 @@
 using Domain.Models;
-using Repositories.Role;
+using Repositories.UserRole;
 
-namespace Services.Role
+namespace Services.UserRole
 {
-    public class RoleService : IRoleService
+    public class RoleService : IUserRoleService
     {
-        private readonly IRoleRepository _roleRepository;
+        private readonly IUserRoleRepository _roleRepository;
 
-        public RoleService(IRoleRepository roleRepository)
+        public RoleService(IUserRoleRepository roleRepository)
         {
             _roleRepository = roleRepository;
         }

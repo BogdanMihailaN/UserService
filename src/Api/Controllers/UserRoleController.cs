@@ -1,16 +1,16 @@
 using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
-using Services.Role;
+using Services.UserRole;
 
 namespace UserService.Api
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class RoleController : ControllerBase
+    public class UserRoleController : ControllerBase
     {
-        private readonly IRoleService _roleService;
+        private readonly IUserRoleService _roleService;
 
-        public RoleController(IRoleService roleService)
+        public UserRoleController(IUserRoleService roleService)
         {
             _roleService = roleService;
         }

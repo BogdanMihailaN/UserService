@@ -3,14 +3,14 @@ using Domain.Models;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
-namespace Repositories.Role
+namespace Repositories.UserRole
 {
-    public class RoleRepository : IRoleRepository
+    public class UserRoleRepository : IUserRoleRepository
     {
         private readonly UserServiceDbContext _context;
         private readonly IMapper _mapper;
 
-        public RoleRepository(UserServiceDbContext context, IMapper mapper)
+        public UserRoleRepository(UserServiceDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
