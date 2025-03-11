@@ -34,6 +34,7 @@ namespace Services.User
         public async Task UpdateUserAsync(int id, UserModel userDto)
         {
             var user = await _userRepository.GetByIdAsync(id);
+            user.Id = id;
             if (user != null)
             {
                 user = userDto;

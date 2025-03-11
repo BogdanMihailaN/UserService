@@ -14,14 +14,14 @@ namespace Services.UserRole
 
         public async Task<RoleModel> GetRoleByIdAsync(int id)
         {
-            var user = await _roleRepository.GetRoleByIdAsync(id);
-            return user;
+            var userRole = await _roleRepository.GetRoleByIdAsync(id);
+            return userRole;
         }
 
         public async Task<IEnumerable<RoleModel>> GetAllRolesAsync()
         {
-            var users = await _roleRepository.GetAllRolesAsync();
-            return users;
+            var userRoles = await _roleRepository.GetAllRolesAsync();
+            return userRoles;
         }
 
         public async Task<int> CreateRoleAsync(RoleModel user)
@@ -32,11 +32,12 @@ namespace Services.UserRole
 
         public async Task UpdateRoleAsync(int id, RoleModel userDto)
         {
-            var user = await _roleRepository.GetRoleByIdAsync(id);
-            if (user != null)
+            var userRole = await _roleRepository.GetRoleByIdAsync(id);
+            if (userRole != null)
             {
-                user = userDto;
-                await _roleRepository.UpdateRoleAsync(user);
+                userRole = userDto;
+                userRole.Id = id;
+                await _roleRepository.UpdateRoleAsync(userRole);
             }
         }
 
